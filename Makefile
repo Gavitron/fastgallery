@@ -8,6 +8,7 @@ deps:
 	$(GO) get ./...
 
 build:
+	PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig"
 	$(GO) build -o bin/fastgallery cmd/fastgallery/main.go
 
 test:
